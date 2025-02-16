@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100vw;
+}
+
+@theme {
+  --color-secondary: #d7e8cd;
+  --color-on-secondary: #3c4b37;
+  --color-transparent: transparent;
+}
+
+.custom-gradient-button {
+  background-color: transparent; /* Keep background transparent */
+  color: var(--color-on-secondary); /* Your text color */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  border-radius: 0.25rem; /* Adjust border radius as needed */
+  width: 13rem; /* Set your desired width */
+  border: none; /* Remove default border if you don't want it */
+  outline: none; /* Remove default outline */
+  cursor: pointer; /* Make it clear it's clickable */
+  transition: all 10s ease;
+}
+
+.custom-gradient-button:hover {
+  background-image: linear-gradient(to right, #007bff, #6f42c1); /* Your gradient */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+}
+
+.custom-gradient-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+input {
+  padding: .5rem;
+}
+
+label, input {
+  display: block;
+  margin: 10px 0; 
+}
+
+input, select {
+  border-radius: 4px;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
